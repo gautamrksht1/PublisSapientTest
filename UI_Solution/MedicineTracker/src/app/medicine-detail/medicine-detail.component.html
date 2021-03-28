@@ -1,0 +1,20 @@
+<div class="panel panel-primary col-sm-8 panel-style">
+    <div class="panel-heading">Medicine Detail</div>
+    <div class="panel-body ">
+        <div class="row">Name: <label>{{viewModel.medicine.name}}</label></div>
+        <div class="row">Brand: <label>{{viewModel.medicine.brand}}</label></div>
+        <div class="row">Price: <label>{{viewModel.medicine.price}}</label></div>
+        <div class="row">Quantity: <label>{{viewModel.medicine.quantity}}</label></div>
+        <div class="row">Expiry Date: <label>{{viewModel.medicine.expiryDate.toDateString()}}</label></div>
+        <div class="row">
+            <label>Notes: </label>
+            <input type="text" [(ngModel)]="viewModel.medicine.notes" />
+        </div>
+        <div class="button-style">
+            <button name="Back" (click)="backToMedicineList()">Close/Back</button>
+            <button name="UpdateNotes" (click)="updateNote()">Update Notes</button>
+
+        </div>
+        <div class="flex-row message">{{viewModel.msg}}</div>
+    </div>
+</div>

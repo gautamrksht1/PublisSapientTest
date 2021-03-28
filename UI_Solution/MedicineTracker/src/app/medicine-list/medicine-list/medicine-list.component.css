@@ -1,0 +1,18 @@
+.yellow-cell{
+    background-color: yellow;
+}
+.red-cell{
+    background-color: red;
+}
+.panel-header{
+    display:flex;
+    flex-direction: flex-row;
+    justify-content: space-between;
+}
+.panel-header > button{
+color:black;
+font-weight: bold;
+}
+.panel-header > input{
+    color:black;
+}

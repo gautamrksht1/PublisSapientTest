@@ -1,0 +1,15 @@
+.panel-style{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-left: 16%;
+}
+.button-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.button-style>button[name="Back"]{
+    margin-right: 9px;;
+}

@@ -1,0 +1,31 @@
+ <div class="panel-style">
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading panel-header">
+            <label>Medicine List</label>
+            <div><label>Search Medicine by Name</label>
+                <input type="text" style="color: black;" (input)="onSearch($event.target.value)" />
+            </div>
+            <button (click)="navigateToAddMedicine()">Add Medicine</button>
+        </div>      
+        <table class="table">
+            <thead>
+              <tr>
+                <th *ngFor="let head of viewModel.headElements" scope="col">{{head}} </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let el of viewModel.displayMedicineList">
+                <th scope="row">{{el.name}}</th>
+                <td>{{el.brand}}</td>
+                <td>{{el.price}}</td>
+                <td [ngClass]="{'yellow-cell': el.isLessAvailable === true}">{{el.quantity}}</td>
+                <td [ngClass]="{'red-cell': el.hasLessExpiryTime === true}">{{el.expiryDate.toDateString()}}</td>
+                <td> <button (click)="viewDetail(el)">View Detail</button> </td>
+              
+            </tr>
+            </tbody>
+          </table>
+      </div>
+    
+</div>

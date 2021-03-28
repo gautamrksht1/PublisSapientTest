@@ -1,0 +1,47 @@
+<div class="panel panel-primary col-sm-8 panel-style">
+    <div class="panel-heading">Add Medicine</div>
+    <div class="panel-body ">
+        <div class="flex-column">
+            <label>Name: </label>
+            <input required type="text" [(ngModel)]="viewModel.medicine.name" />
+            <label *ngIf="viewModel.nameValidation" class="warning">Name is required</label>
+        </div>
+        <div class="flex-column">
+            <label>Brand: </label>
+            <input  required type="text" [(ngModel)]="viewModel.medicine.brand" />
+            <label *ngIf="viewModel.brandValidation" class="warning">Brand is required</label>
+        </div>
+        <div class="flex-column">
+            <label>Price: </label>
+            <input required type="number" [(ngModel)]="viewModel.medicine.price" />
+            <label *ngIf="viewModel.priceValidation" class="warning">Price is required</label>
+        </div>
+        <div class="flex-column">
+            <label>Quantity: </label>
+            <input required type="number" [(ngModel)]="viewModel.medicine.quantity" />
+            <label *ngIf="viewModel.quantityValidation" class="warning">Quantity is required</label>
+        </div>
+        <div class="flex-column">
+            <label>Expiry: </label>
+            <input required type="date" [(ngModel)]="viewModel.medicine.expiryDate" />
+            <label *ngIf="viewModel.expiryValidation" class="warning">Expiry is required</label>
+           
+        </div>
+        <div class="flex-column">
+            <label>Notes: </label>
+            <input required type="text"  [(ngModel)]="viewModel.medicine.notes" />
+            <label  *ngIf="viewModel.notesValidation" class="warning">Notes is required</label>
+            
+        </div>
+        <div class="button-style flex-row">
+            <button name="Back" (click)="backToMedicineList()">Close/Back</button>
+            <button name="addNotes" (click)="addMedicine()">Add Medicine</button>
+
+        </div>
+        <div> <label *ngIf="viewModel.validationMessage.length>0" class="warning">{{viewModel.validationMessage}}</label></div>
+        <div class="flex-row message">     
+           {{viewModel.msg}}</div>
+        
+          
+    </div>
+</div>

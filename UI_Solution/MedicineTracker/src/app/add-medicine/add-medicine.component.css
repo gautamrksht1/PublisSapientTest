@@ -1,0 +1,14 @@
+.panel-style{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-left: 16%;
+}
+.button-style{
+    padding: 8px;
+    justify-content: space-between;
+}
+.warning{
+color:red;
+font-weight:normal;
+}
